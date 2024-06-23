@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copywriter</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@rive-app/canvas@latest/rive.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="heading"><h1>Titan copywriter</h1>
+        <img src="Images/fluent_pen-16-regular.svg" alt="">
+      </div>
+        <h3>Designed to streamline content creation within our organization.</h3>
+        <div class="input-container">
+            <textarea id="prompt" placeholder="Eg. I need a copy to contextually nudge the user to buy more mailboxes."></textarea>
+        </div>
+
+<div class="generate-btn-plus-dropdowns" id="generate-btn-plus-dropdowns" class="hidden">
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+            <div class="dropdown-btns">
+            <!--Dropdown for purpose-->
+            <div class="dropdown">
+                <button class="dropdown-toggle" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false">
+                  <div class="icon"><img src="Images/Purpose.svg" ></div>
+                  <span class="label">Purpose</span>
+                  <div class="arrow"><img src="Images/Arrow.svg"> </div>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <span>Purpose</span>
+                  <a class="dropdown-item" href="#" data-value="contextaul-nudge">Contextual nudge</a>
+                  <a class="dropdown-item" href="#" data-value="feature-discovery">Feature discovery</a>
+                  <a class="dropdown-item" href="#" data-value="error-message">Error message</a>
+                  <a class="dropdown-item" href="#" data-value="feature-marketing">Feature marketing</a>
+                  <a class="dropdown-item" href="#" data-value="no-purpose">Nothing specific</a>
+                </div>
+              </div>
+            <!--Dropdown for purpose-->
+            
+            <!--Dropdown for length-->
+              <div class="dropdown">
+                <button class="dropdown-toggle" id="dropdownMenuButtonLength" aria-haspopup="true" aria-expanded="false">
+                  <div class="icon"><img src="Images/length.svg"></div>
+                  <span class="label">Length</span>
+                  <div class="arrow"><img src="Images/Arrow.svg"></div>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonLength">
+                    <span>Length</span>
+                  <a class="dropdown-item" href="#" data-value="short">Short</a>
+                  <a class="dropdown-item" href="#" data-value="long">Long</a>
+                </div>
+              </div>
+              <!--Dropdown for length-->
+            
+              <!--Dropdown for style-->
+              <div class="dropdown">
+                <button class="dropdown-toggle" id="dropdownMenuButtonLanguage" aria-haspopup="true" aria-expanded="false">
+                  <div class="icon"><img src="Images/Mic.svg"></div>
+                  <span class="label">Tone</span>
+                  <div class="arrow"><img src="Images/Arrow.svg"></div>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonLanguage">
+                    <span>Tone</span>
+                  <a class="dropdown-item" href="#" data-value="formal">Formal</a>
+                  <a class="dropdown-item" href="#" data-value="conversational">Conversational</a>
+                  <a class="dropdown-item" href="#" data-value="instructional">Instructional</a>
+                </div>
+              </div>
+               <!--Dropdown for style-->
+               
+            </div>
+            <!--generate btn-->
+                <button id="generate-btn">Generate</button>
+            <!--generate btn-->
+            </div>
+
+        <div id="rive-container" class="hidden">
+            <canvas id="rive-canvas" width="960px" height="250px"></canvas>
+        </div>
+
+        <div id="response-container" class="hidden">
+            <div class="response-box">
+                <p id="response-text"></p>
+                <button id="copy-btn"><img src="Images/Copy text.svg" alt=""><span>Copy</span></button>
+            </div>
+        </div>
+    </div>
+ 
+    <script src="script.js"></script>
+
+</body>
+</html>
