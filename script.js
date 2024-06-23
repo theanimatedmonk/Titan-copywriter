@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Handle text input field click to expand and show dropdowns again
     promptTextarea.addEventListener('click', () => {
-        promptTextarea.style.height = '150px';
+        promptTextarea.style.height = '100px';
         promptTextarea.style.backgroundColor = '#ffffff';
         promptTextarea.style.whiteSpace = 'normal';
         promptTextarea.style.overflow = 'auto';
